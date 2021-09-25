@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Http\Resources\BookCollection;
+use App\Http\Resources\BookResource;
+use App\Http\Requests\StoreBookRequest;
 
 class BookController extends Controller
 {
@@ -19,18 +21,28 @@ class BookController extends Controller
      */
     public function index()
     {
-        return new BookCollection(Book::paginate());
+        return new BookCollection(
+            Book::paginate()
+        );
     }
 
     /**
+     * Create
+     *
      * Store a newly created book.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @group Books Management
+     *
+     * @param  \App\Http\Requests\StoreBookRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreBookRequest $request)
     {
-        //
+        return new BookResource(
+            Book::create(
+                $request->validated()
+            )
+        );
     }
 
     /**

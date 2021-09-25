@@ -17,4 +17,11 @@ class Book extends Model
     protected $casts = [
         'year' => 'integer',
     ];
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['title', 'year', 'description'];
 }

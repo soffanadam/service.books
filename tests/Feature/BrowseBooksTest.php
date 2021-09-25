@@ -7,23 +7,21 @@ use Illuminate\Testing\Fluent\AssertableJson;
 use Tests\TestCase;
 use App\Models\Book;
 
-class BookTest extends TestCase
+class BrowseBookTest extends TestCase
 {
     use RefreshDatabase;
 
     /**
-     * A basic test example.
+     * Test can browse books.
      *
      * @return void
      */
-    public function test_index()
+    public function test_can_browse_books()
     {
         $count = 50;
         Book::factory()->count($count)->create();
 
-        $response = $this->get('/books');
-
-        $response->dump();
+        $response = $this->getJson('/books');
 
         $response
             ->assertStatus(200)
@@ -42,8 +40,8 @@ class BookTest extends TestCase
                     )
                     ->has('data.0', fn ($json) =>
                         $json
-                            ->has('name')
-                            ->whereType('name', 'string')
+                            ->has('title')
+                            ->whereType('title', 'string')
                             ->has('year')
                             ->whereType('year', 'integer')
                             ->etc()
