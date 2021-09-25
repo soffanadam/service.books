@@ -23,5 +23,6 @@ class DeleteBookTest extends TestCase
 
         $response->assertStatus(200);
         $this->assertDeleted($book);
+        $this->assertModelMissing($book);
     }
 }

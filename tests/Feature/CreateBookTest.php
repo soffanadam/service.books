@@ -21,11 +21,7 @@ class CreateBookTest extends TestCase
     {
         $book = Book::factory()->make();
 
-        $response = $this->postJson('/books', [
-            'title' => $book->title,
-            'year' => $book->year,
-            'description' => $book->description,
-        ]);
+        $response = $this->postJson('/books', $book->toArray());
 
         $response
             ->assertStatus(201)
@@ -37,6 +33,8 @@ class CreateBookTest extends TestCase
                     ->where('description', $book->description)
                     ->etc()
             );
+
+        $this->assertModelExists(Book::first());
     }
 
     /**

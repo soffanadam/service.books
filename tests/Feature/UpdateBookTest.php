@@ -22,11 +22,7 @@ class UpdateBookTest extends TestCase
         $book = Book::factory()->create();
         $newBook = Book::factory()->make();
 
-        $response = $this->putJson("/books/{$book->id}", [
-            'title' => $newBook->title,
-            'year' => $newBook->year,
-            'description' => $newBook->description,
-        ]);
+        $response = $this->putJson("/books/{$book->id}", $newBook->toArray());
 
         $response
             ->assertStatus(200)
@@ -38,6 +34,11 @@ class UpdateBookTest extends TestCase
                     ->where('description', $newBook->description)
                     ->etc()
             );
+
+        $book->refresh();
+        $this->assertEquals($book->title, $newBook->title);
+        $this->assertEquals($book->year, $newBook->year);
+        $this->assertEquals($book->description, $newBook->description);
     }
 
     /**
