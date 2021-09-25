@@ -85,11 +85,15 @@ class BookController extends Controller
      *
      * Remove the specified book.
      *
+     * @group Books Management
+     *
      * @param  \App\Models\Book  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(Book $book)
     {
         $book->delete();
+
+        return response('', 204);
     }
 }

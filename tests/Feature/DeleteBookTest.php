@@ -21,7 +21,7 @@ class DeleteBookTest extends TestCase
 
         $response = $this->deleteJson("/books/{$book->id}");
 
-        $response->assertStatus(200);
+        $response->assertStatus(204);
         $this->assertDeleted($book);
         $this->assertModelMissing($book);
     }

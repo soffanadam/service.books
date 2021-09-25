@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "46fa34d4-cd04-4e65-8356-2c5788c0763e",
+        "_postman_id": "d13e45cb-3b27-46f2-b955-77400c4f1094",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -66,20 +66,51 @@
                                     "value": "59"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\n    \"message\": \"SQLSTATE[42S02]: Base table or view not found: 1146 Table 'service_books.books' doesn't exist (SQL: select count(*) as aggregate from `books`)\",\n    \"exception\": \"Illuminate\\\\Database\\\\QueryException\",\n    \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php\",\n    \"line\": 692,\n    \"trace\": [\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php\",\n            \"line\": 652,\n            \"function\": \"runQueryCallback\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php\",\n            \"line\": 360,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2350,\n            \"function\": \"select\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2338,\n            \"function\": \"runSelect\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2872,\n            \"function\": \"Illuminate\\\\Database\\\\Query\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2339,\n            \"function\": \"onceWithColumns\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2486,\n            \"function\": \"get\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2445,\n            \"function\": \"runPaginationCountQuery\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Eloquent\/Builder.php\",\n            \"line\": 798,\n            \"function\": \"getCountForPagination\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Support\/Traits\/ForwardsCalls.php\",\n            \"line\": 23,\n            \"function\": \"paginate\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Eloquent\/Model.php\",\n            \"line\": 2109,\n            \"function\": \"forwardCallTo\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Model\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Eloquent\/Model.php\",\n            \"line\": 2121,\n            \"function\": \"__call\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Model\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/app\/Http\/Controllers\/BookController.php\",\n            \"line\": 22,\n            \"function\": \"__callStatic\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Model\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php\",\n            \"line\": 54,\n            \"function\": \"index\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\BookController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php\",\n            \"line\": 45,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 261,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 204,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 695,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 128,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 127,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 103,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 55,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 103,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 697,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 672,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 636,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 625,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 166,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 128,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/fruitcake\/laravel-cors\/src\/HandleCors.php\",\n            \"line\": 38,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Fruitcake\\\\Cors\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 103,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 141,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 110,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 89,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 222,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 179,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 116,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 118,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 75,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 51,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/knuckleswtf\/scribe\/src\/Commands\/GenerateDocumentation.php\",\n            \"line\": 46,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Util.php\",\n            \"line\": 40,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php\",\n            \"line\": 651,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 136,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Command\/Command.php\",\n            \"line\": 299,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 121,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 978,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 295,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 167,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php\",\n            \"line\": 92,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php\",\n            \"line\": 129,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"title\":null,\"year\":1999,\"description\":\"Laboriosam quis veritatis vel suscipit consequatur sit necessitatibus. Assumenda excepturi tenetur deleniti sapiente ut distinctio non assumenda. Autem quod vel voluptatem iste cupiditate. Dolore non molestiae libero autem rerum ex qui.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":2,\"title\":null,\"year\":2015,\"description\":\"Libero sunt alias est facere totam quia. Aut vel voluptates dolor commodi nihil aspernatur commodi. Facilis perspiciatis quis non non aut. Voluptate hic et repellendus consectetur delectus veniam suscipit.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":3,\"title\":null,\"year\":1993,\"description\":\"Id in facere provident ea tempora. Praesentium deleniti ut id quas nam. Rem saepe maiores maiores qui quia quaerat a.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":4,\"title\":null,\"year\":2012,\"description\":\"In optio non ducimus porro. Est id est minima esse minus. Nulla quia ad reprehenderit facilis ad aut quos nisi. Qui quis corrupti omnis eos.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":5,\"title\":null,\"year\":1988,\"description\":\"Aliquid nobis quas atque velit assumenda libero expedita. Ut alias enim ad doloremque. Et sit inventore sunt rem qui odio. Itaque facilis minima maxime. Incidunt natus commodi dolore sint eveniet.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":6,\"title\":null,\"year\":1977,\"description\":\"Eius dolore ab repellendus minima aliquid quas nesciunt dolores. Maxime enim et rerum sapiente aliquid corporis natus quia. Aut reiciendis consequatur et molestiae et aliquid molestias aut. Mollitia possimus vel minima soluta in.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":7,\"title\":null,\"year\":1972,\"description\":\"Eligendi vero cum repudiandae placeat ut vitae. Consequuntur sit consectetur ipsam voluptatem enim adipisci quae. Et similique minima iste dolore doloribus voluptatum reprehenderit non.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":8,\"title\":null,\"year\":1991,\"description\":\"Harum minima rem dolore nam sequi exercitationem. Sint rerum corrupti quae. Temporibus dolores porro delectus harum voluptatem sequi. Ratione eos est perferendis error. Et dolores in sed.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":9,\"title\":null,\"year\":2006,\"description\":\"Autem magni soluta et ipsa rem esse. Quaerat voluptas debitis quia eos est. Unde praesentium nemo amet eveniet sed consequuntur cumque.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":10,\"title\":null,\"year\":2004,\"description\":\"Ex magni voluptatem aperiam. Aut quam unde cumque sed omnis praesentium. In quibusdam deleniti labore incidunt.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":11,\"title\":null,\"year\":1970,\"description\":\"At dolorum sunt consequatur porro. Suscipit odio et praesentium consequatur vel quia adipisci. Et error quidem accusantium expedita in quis. Magnam repellendus aut consequatur qui.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":12,\"title\":null,\"year\":2015,\"description\":\"Unde est in atque. Quam omnis quam voluptatibus quasi. Velit optio odio sit est itaque suscipit.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":13,\"title\":null,\"year\":1970,\"description\":\"Explicabo magnam expedita rem iusto aut vitae eum. Corrupti voluptatem earum velit iure iure autem.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":14,\"title\":null,\"year\":1986,\"description\":\"Consequatur illo sed ut necessitatibus sed. Enim nihil aut ducimus aliquid voluptatem consequuntur nobis nemo. Et architecto sint in esse ea laborum. Sint quidem optio amet et voluptatibus tempore reprehenderit.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"},{\"id\":15,\"title\":null,\"year\":2002,\"description\":\"Magni labore nostrum nihil recusandae veniam aut. Unde eveniet suscipit reprehenderit dolorem qui. Quis quas praesentium blanditiis vel.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"}],\"links\":{\"first\":\"http:\\\/\\\/localhost\\\/books?page=1\",\"last\":\"http:\\\/\\\/localhost\\\/books?page=4\",\"prev\":null,\"next\":\"http:\\\/\\\/localhost\\\/books?page=2\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":4,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/books?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost\\\/books?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/books?page=3\",\"label\":\"3\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/books?page=4\",\"label\":\"4\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/books?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost\\\/books\",\"per_page\":15,\"to\":15,\"total\":50}}",
                             "name": ""
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Endpoints",
-            "description": "",
-            "item": [
+                },
                 {
-                    "name": "Store a newly created book.",
+                    "name": "Delete",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "books\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/books\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "6",
+                                    "description": "The ID of the book."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Remove the specified book.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -99,8 +130,11 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
-                        "description": "",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"How to OOBE\",\"year\":\"2000\",\"description\":\"Get your first OOBE with this book\"}"
+                        },
+                        "description": "Store a newly created book.",
                         "auth": {
                             "type": "noauth"
                         }
@@ -108,7 +142,7 @@
                     "response": []
                 },
                 {
-                    "name": "Display the specified book.",
+                    "name": "Show",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -120,7 +154,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "4",
+                                    "value": "9",
                                     "description": "The ID of the book."
                                 }
                             ]
@@ -137,7 +171,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
+                        "description": "Display the specified book.",
                         "auth": {
                             "type": "noauth"
                         }
@@ -146,12 +180,12 @@
                         {
                             "header": [
                                 {
-                                    "key": "content-type",
-                                    "value": "text\/html; charset=UTF-8"
-                                },
-                                {
                                     "key": "cache-control",
                                     "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
                                 },
                                 {
                                     "key": "x-ratelimit-limit",
@@ -163,13 +197,13 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "",
+                            "body": "{\"id\":1,\"title\":null,\"year\":1999,\"description\":\"Laboriosam quis veritatis vel suscipit consequatur sit necessitatibus. Assumenda excepturi tenetur deleniti sapiente ut distinctio non assumenda. Autem quod vel voluptatem iste cupiditate. Dolore non molestiae libero autem rerum ex qui.\",\"created_at\":\"2021-09-25T16:01:43.000000Z\",\"updated_at\":\"2021-09-25T16:01:43.000000Z\"}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Update the specified book.",
+                    "name": "Update",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -181,7 +215,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "8",
+                                    "value": "18",
                                     "description": "The ID of the book."
                                 }
                             ]
@@ -197,45 +231,11 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Remove the specified book.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "books\/:id",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/books\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "5",
-                                    "description": "The ID of the book."
-                                }
-                            ]
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"How to OOBE\",\"year\":\"2000\",\"description\":\"Get your first OOBE with this book\"}"
                         },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
+                        "description": "Update the specified book.",
                         "auth": {
                             "type": "noauth"
                         }

@@ -108,7 +108,7 @@ fetch(url, {
 
 <span id="example-responses-GETbooks">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary>
@@ -122,537 +122,175 @@ x-ratelimit-remaining: 59
         </details>         <pre>
 
 <code class="language-json">{
-    &quot;message&quot;: &quot;SQLSTATE[42S02]: Base table or view not found: 1146 Table 'service_books.books' doesn't exist (SQL: select count(*) as aggregate from `books`)&quot;,
-    &quot;exception&quot;: &quot;Illuminate\\Database\\QueryException&quot;,
-    &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php&quot;,
-    &quot;line&quot;: 692,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php&quot;,
-            &quot;line&quot;: 652,
-            &quot;function&quot;: &quot;runQueryCallback&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php&quot;,
-            &quot;line&quot;: 360,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
-            &quot;line&quot;: 2350,
-            &quot;function&quot;: &quot;select&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
-            &quot;line&quot;: 2338,
-            &quot;function&quot;: &quot;runSelect&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
-            &quot;line&quot;: 2872,
-            &quot;function&quot;: &quot;Illuminate\\Database\\Query\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
-            &quot;line&quot;: 2339,
-            &quot;function&quot;: &quot;onceWithColumns&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
-            &quot;line&quot;: 2486,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
-            &quot;line&quot;: 2445,
-            &quot;function&quot;: &quot;runPaginationCountQuery&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php&quot;,
-            &quot;line&quot;: 798,
-            &quot;function&quot;: &quot;getCountForPagination&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php&quot;,
-            &quot;line&quot;: 23,
-            &quot;function&quot;: &quot;paginate&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php&quot;,
-            &quot;line&quot;: 2109,
-            &quot;function&quot;: &quot;forwardCallTo&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Model&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php&quot;,
-            &quot;line&quot;: 2121,
-            &quot;function&quot;: &quot;__call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Model&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/app/Http/Controllers/BookController.php&quot;,
-            &quot;line&quot;: 22,
-            &quot;function&quot;: &quot;__callStatic&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Model&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Controller.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;index&quot;,
-            &quot;class&quot;: &quot;App\\Http\\Controllers\\BookController&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;callAction&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
-            &quot;line&quot;: 261,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
-            &quot;line&quot;: 204,
-            &quot;function&quot;: &quot;runController&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 695,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 128,
-            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 127,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 103,
-            &quot;function&quot;: &quot;handleRequest&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 55,
-            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 103,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 697,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 672,
-            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 636,
-            &quot;function&quot;: &quot;runRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 625,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 166,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 128,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 1999,
+            &quot;description&quot;: &quot;Laboriosam quis veritatis vel suscipit consequatur sit necessitatibus. Assumenda excepturi tenetur deleniti sapiente ut distinctio non assumenda. Autem quod vel voluptatem iste cupiditate. Dolore non molestiae libero autem rerum ex qui.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
         },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/fruitcake/laravel-cors/src/HandleCors.php&quot;,
-            &quot;line&quot;: 38,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 103,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 110,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 89,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 222,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 179,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
+        {
+            &quot;id&quot;: 2,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 2015,
+            &quot;description&quot;: &quot;Libero sunt alias est facere totam quia. Aut vel voluptates dolor commodi nihil aspernatur commodi. Facilis perspiciatis quis non non aut. Voluptate hic et repellendus consectetur delectus veniam suscipit.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
         },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 118,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 75,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 46,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
-            &quot;line&quot;: 651,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 136,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/symfony/console/Command/Command.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 121,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 978,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 295,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Console/Application.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
-            &quot;line&quot;: 129,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/var/www/artisan&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
+        {
+            &quot;id&quot;: 3,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 1993,
+            &quot;description&quot;: &quot;Id in facere provident ea tempora. Praesentium deleniti ut id quas nam. Rem saepe maiores maiores qui quia quaerat a.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 2012,
+            &quot;description&quot;: &quot;In optio non ducimus porro. Est id est minima esse minus. Nulla quia ad reprehenderit facilis ad aut quos nisi. Qui quis corrupti omnis eos.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 1988,
+            &quot;description&quot;: &quot;Aliquid nobis quas atque velit assumenda libero expedita. Ut alias enim ad doloremque. Et sit inventore sunt rem qui odio. Itaque facilis minima maxime. Incidunt natus commodi dolore sint eveniet.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 1977,
+            &quot;description&quot;: &quot;Eius dolore ab repellendus minima aliquid quas nesciunt dolores. Maxime enim et rerum sapiente aliquid corporis natus quia. Aut reiciendis consequatur et molestiae et aliquid molestias aut. Mollitia possimus vel minima soluta in.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 1972,
+            &quot;description&quot;: &quot;Eligendi vero cum repudiandae placeat ut vitae. Consequuntur sit consectetur ipsam voluptatem enim adipisci quae. Et similique minima iste dolore doloribus voluptatum reprehenderit non.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 1991,
+            &quot;description&quot;: &quot;Harum minima rem dolore nam sequi exercitationem. Sint rerum corrupti quae. Temporibus dolores porro delectus harum voluptatem sequi. Ratione eos est perferendis error. Et dolores in sed.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 2006,
+            &quot;description&quot;: &quot;Autem magni soluta et ipsa rem esse. Quaerat voluptas debitis quia eos est. Unde praesentium nemo amet eveniet sed consequuntur cumque.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 2004,
+            &quot;description&quot;: &quot;Ex magni voluptatem aperiam. Aut quam unde cumque sed omnis praesentium. In quibusdam deleniti labore incidunt.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 1970,
+            &quot;description&quot;: &quot;At dolorum sunt consequatur porro. Suscipit odio et praesentium consequatur vel quia adipisci. Et error quidem accusantium expedita in quis. Magnam repellendus aut consequatur qui.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 2015,
+            &quot;description&quot;: &quot;Unde est in atque. Quam omnis quam voluptatibus quasi. Velit optio odio sit est itaque suscipit.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 13,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 1970,
+            &quot;description&quot;: &quot;Explicabo magnam expedita rem iusto aut vitae eum. Corrupti voluptatem earum velit iure iure autem.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 1986,
+            &quot;description&quot;: &quot;Consequatur illo sed ut necessitatibus sed. Enim nihil aut ducimus aliquid voluptatem consequuntur nobis nemo. Et architecto sint in esse ea laborum. Sint quidem optio amet et voluptatibus tempore reprehenderit.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;title&quot;: null,
+            &quot;year&quot;: 2002,
+            &quot;description&quot;: &quot;Magni labore nostrum nihil recusandae veniam aut. Unde eveniet suscipit reprehenderit dolorem qui. Quis quas praesentium blanditiis vel.&quot;,
+            &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
         }
-    ]
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://localhost/books?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost/books?page=4&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: &quot;http://localhost/books?page=2&quot;
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 4,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/books?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/books?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/books?page=3&quot;,
+                &quot;label&quot;: &quot;3&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/books?page=4&quot;,
+                &quot;label&quot;: &quot;4&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/books?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost/books&quot;,
+        &quot;per_page&quot;: 15,
+        &quot;to&quot;: 15,
+        &quot;total&quot;: 50
+    }
 }</code>
  </pre>
     </span>
@@ -697,288 +335,24 @@ x-ratelimit-remaining: 59
         </p>
                     </form>
 
-        <h1 id="endpoints">Endpoints</h1>
-
-    
-
-            <h2 id="endpoints-POSTbooks">Store a newly created book.</h2>
+            <h2 id="books-management-DELETEbooks--id-">Delete</h2>
 
 <p>
 </p>
 
-
-
-<span id="example-requests-POSTbooks">
-<blockquote>Example request:</blockquote>
-
-
-<pre><code class="language-bash">curl --request POST \
-    "http://localhost/books" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre>
-
-<pre><code class="language-javascript">const url = new URL(
-    "http://localhost/books"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre>
-</span>
-
-<span id="example-responses-POSTbooks">
-</span>
-<span id="execution-results-POSTbooks" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTbooks"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTbooks"></code></pre>
-</span>
-<span id="execution-error-POSTbooks" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTbooks"></code></pre>
-</span>
-<form id="form-POSTbooks" data-method="POST"
-      data-path="books"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTbooks', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTbooks"
-                    onclick="tryItOut('POSTbooks');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTbooks"
-                    onclick="cancelTryOut('POSTbooks');" hidden>Cancel
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTbooks" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>books</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETbooks--id-">Display the specified book.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETbooks--id-">
-<blockquote>Example request:</blockquote>
-
-
-<pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/books/4" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre>
-
-<pre><code class="language-javascript">const url = new URL(
-    "http://localhost/books/4"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre>
-</span>
-
-<span id="example-responses-GETbooks--id-">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">content-type: text/html; charset=UTF-8
-cache-control: no-cache, private
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json"></code>
- </pre>
-    </span>
-<span id="execution-results-GETbooks--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETbooks--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETbooks--id-"></code></pre>
-</span>
-<span id="execution-error-GETbooks--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETbooks--id-"></code></pre>
-</span>
-<form id="form-GETbooks--id-" data-method="GET"
-      data-path="books/{id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETbooks--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETbooks--id-"
-                    onclick="tryItOut('GETbooks--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETbooks--id-"
-                    onclick="cancelTryOut('GETbooks--id-');" hidden>Cancel
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETbooks--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>books/{id}</code></b>
-        </p>
-                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="GETbooks--id-"
-               data-component="url" required  hidden>
-    <br>
-<p>The ID of the book.</p>            </p>
-                    </form>
-
-            <h2 id="endpoints-PUTbooks--id-">Update the specified book.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-PUTbooks--id-">
-<blockquote>Example request:</blockquote>
-
-
-<pre><code class="language-bash">curl --request PUT \
-    "http://localhost/books/8" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre>
-
-<pre><code class="language-javascript">const url = new URL(
-    "http://localhost/books/8"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "PUT",
-    headers,
-}).then(response =&gt; response.json());</code></pre>
-</span>
-
-<span id="example-responses-PUTbooks--id-">
-</span>
-<span id="execution-results-PUTbooks--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-PUTbooks--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTbooks--id-"></code></pre>
-</span>
-<span id="execution-error-PUTbooks--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTbooks--id-"></code></pre>
-</span>
-<form id="form-PUTbooks--id-" data-method="PUT"
-      data-path="books/{id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTbooks--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTbooks--id-"
-                    onclick="tryItOut('PUTbooks--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTbooks--id-"
-                    onclick="cancelTryOut('PUTbooks--id-');" hidden>Cancel
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTbooks--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-darkblue">PUT</small>
-            <b><code>books/{id}</code></b>
-        </p>
-            <p>
-            <small class="badge badge-purple">PATCH</small>
-            <b><code>books/{id}</code></b>
-        </p>
-                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="PUTbooks--id-"
-               data-component="url" required  hidden>
-    <br>
-<p>The ID of the book.</p>            </p>
-                    </form>
-
-            <h2 id="endpoints-DELETEbooks--id-">Remove the specified book.</h2>
-
-<p>
-</p>
-
-
+<p>Remove the specified book.</p>
 
 <span id="example-requests-DELETEbooks--id-">
 <blockquote>Example request:</blockquote>
 
 
 <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/books/5" \
+    "http://localhost/books/6" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/books/5"
+    "http://localhost/books/6"
 );
 
 const headers = {
@@ -1043,6 +417,351 @@ fetch(url, {
     <br>
 <p>The ID of the book.</p>            </p>
                     </form>
+
+            <h2 id="books-management-POSTbooks">Create</h2>
+
+<p>
+</p>
+
+<p>Store a newly created book.</p>
+
+<span id="example-requests-POSTbooks">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request POST \
+    "http://localhost/books" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"title\": \"How to OOBE\",
+    \"year\": \"2000\",
+    \"description\": \"Get your first OOBE with this book\"
+}"
+</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/books"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "title": "How to OOBE",
+    "year": "2000",
+    "description": "Get your first OOBE with this book"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-POSTbooks">
+</span>
+<span id="execution-results-POSTbooks" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTbooks"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTbooks"></code></pre>
+</span>
+<span id="execution-error-POSTbooks" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTbooks"></code></pre>
+</span>
+<form id="form-POSTbooks" data-method="POST"
+      data-path="books"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTbooks', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTbooks"
+                    onclick="tryItOut('POSTbooks');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTbooks"
+                    onclick="cancelTryOut('POSTbooks');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTbooks" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>books</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>title</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="title"
+               data-endpoint="POSTbooks"
+               data-component="body" required  hidden>
+    <br>
+<p>The title of the book. Must not be greater than 255 characters.</p>        </p>
+                <p>
+            <b><code>year</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="year"
+               data-endpoint="POSTbooks"
+               data-component="body" required  hidden>
+    <br>
+<p>When the book was published. Must be a valid date in the format <code>Y</code>.</p>        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="POSTbooks"
+               data-component="body"  hidden>
+    <br>
+<p>What is the book about.</p>        </p>
+    
+    </form>
+
+            <h2 id="books-management-GETbooks--id-">Show</h2>
+
+<p>
+</p>
+
+<p>Display the specified book.</p>
+
+<span id="example-requests-GETbooks--id-">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/books/9" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/books/9"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-GETbooks--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 58
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;id&quot;: 1,
+    &quot;title&quot;: null,
+    &quot;year&quot;: 1999,
+    &quot;description&quot;: &quot;Laboriosam quis veritatis vel suscipit consequatur sit necessitatibus. Assumenda excepturi tenetur deleniti sapiente ut distinctio non assumenda. Autem quod vel voluptatem iste cupiditate. Dolore non molestiae libero autem rerum ex qui.&quot;,
+    &quot;created_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2021-09-25T16:01:43.000000Z&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETbooks--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETbooks--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETbooks--id-"></code></pre>
+</span>
+<span id="execution-error-GETbooks--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETbooks--id-"></code></pre>
+</span>
+<form id="form-GETbooks--id-" data-method="GET"
+      data-path="books/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETbooks--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETbooks--id-"
+                    onclick="tryItOut('GETbooks--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETbooks--id-"
+                    onclick="cancelTryOut('GETbooks--id-');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETbooks--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>books/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETbooks--id-"
+               data-component="url" required  hidden>
+    <br>
+<p>The ID of the book.</p>            </p>
+                    </form>
+
+            <h2 id="books-management-PUTbooks--id-">Update</h2>
+
+<p>
+</p>
+
+<p>Update the specified book.</p>
+
+<span id="example-requests-PUTbooks--id-">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request PUT \
+    "http://localhost/books/18" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"title\": \"How to OOBE\",
+    \"year\": \"2000\",
+    \"description\": \"Get your first OOBE with this book\"
+}"
+</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/books/18"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "title": "How to OOBE",
+    "year": "2000",
+    "description": "Get your first OOBE with this book"
+}
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-PUTbooks--id-">
+</span>
+<span id="execution-results-PUTbooks--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTbooks--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTbooks--id-"></code></pre>
+</span>
+<span id="execution-error-PUTbooks--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTbooks--id-"></code></pre>
+</span>
+<form id="form-PUTbooks--id-" data-method="PUT"
+      data-path="books/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTbooks--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTbooks--id-"
+                    onclick="tryItOut('PUTbooks--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTbooks--id-"
+                    onclick="cancelTryOut('PUTbooks--id-');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTbooks--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>books/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>books/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTbooks--id-"
+               data-component="url" required  hidden>
+    <br>
+<p>The ID of the book.</p>            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>title</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="title"
+               data-endpoint="PUTbooks--id-"
+               data-component="body" required  hidden>
+    <br>
+<p>The title of the book. Must not be greater than 255 characters.</p>        </p>
+                <p>
+            <b><code>year</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="year"
+               data-endpoint="PUTbooks--id-"
+               data-component="body" required  hidden>
+    <br>
+<p>When the book was published. Must be a valid date in the format <code>Y</code>.</p>        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="PUTbooks--id-"
+               data-component="body"  hidden>
+    <br>
+<p>What is the book about.</p>        </p>
+    
+    </form>
 
     
 
