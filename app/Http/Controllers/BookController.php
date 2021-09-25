@@ -47,18 +47,26 @@ class BookController extends Controller
     }
 
     /**
+     * Show
+     *
      * Display the specified book.
      *
-     * @param  int  $id
+     * @group Books Management
+     *
+     * @param  \App\Http\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Book $book)
     {
-        //
+        return new BookResource($book);
     }
 
     /**
+     * Update
+     *
      * Update the specified book.
+     *
+     * @group Books Management
      *
      * @param  \App\Http\Requests\UpdateBookRequest  $request
      * @param  \App\Models\Book  $book
@@ -73,6 +81,8 @@ class BookController extends Controller
     }
 
     /**
+     * Delete
+     *
      * Remove the specified book.
      *
      * @param  \App\Models\Book  $id
