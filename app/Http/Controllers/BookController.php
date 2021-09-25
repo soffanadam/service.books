@@ -75,11 +75,11 @@ class BookController extends Controller
     /**
      * Remove the specified book.
      *
-     * @param  int  $id
+     * @param  \App\Models\Book  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Book $book)
     {
-        //
+        $book->delete();
     }
 }

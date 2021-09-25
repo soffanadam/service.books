@@ -41,7 +41,7 @@ class UpdateBookTest extends TestCase
     }
 
     /**
-     * Test cannot create a new book with empty data.
+     * Test cannot update a new book with empty data.
      *
      * @return void
      */
@@ -65,7 +65,7 @@ class UpdateBookTest extends TestCase
     }
 
     /**
-     * Test cannot create a update book with invalid data.
+     * Test cannot update book with invalid data.
      *
      * @return void
      */
